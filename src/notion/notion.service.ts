@@ -43,7 +43,7 @@ export class NotionService {
     let pageId: string;
 
     if (pages.results.length === 0) {
-      // ✅ 페이지 없으면 새로 생성
+      // 페이지 없으면 새로 생성
       const createResult = await this.notion.pages.create({
         parent: { database_id: this.notionDbId! },
         properties: {
@@ -66,7 +66,7 @@ export class NotionService {
 
       pageId = createResult.id;
     } else {
-      // ✅ 이미 있는 경우
+      // 이미 있는 경우
       pageId = pages.results[0].id;
     }
 

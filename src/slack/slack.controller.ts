@@ -39,6 +39,6 @@ export class SlackController {
 
     await this.notionService.checkRoutine(user_name, routine);
 
-    return res.status(200).send('체크완료');
+    return res.status(200).send(command + ' 체크완료');
   }
 }
