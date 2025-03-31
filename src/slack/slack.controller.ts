@@ -37,8 +37,7 @@ export class SlackController {
 
     const routine = commandToRoutineMap[command];
 
+    res.status(200).send(command + ' 체크완료');
     await this.notionService.checkRoutine(user_name, routine);
-
-    return res.status(200).send(command + ' 체크완료');
   }
 }
